@@ -1,0 +1,150 @@
+/* 1. Globala inställningar och nollställning */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. Header (Mobil-först: Staplat i mitten) */
+header {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Snygg mjuk skugga */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50% 20% / 10% 40%;
+    object-fit: cover;
+    border: 3px solid #555555;
+    margin-bottom: 15px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-style: italic;
+    font-variant-caps: small-caps;
+    margin: 0 0 5px 0;
+    color: #1a1a1a;
+}
+
+
+.om-mig-text {
+    font-size: 14px;
+    color: #555555;
+    margin: 0;
+    font:
+  1.2rem "Fira Sans",sans-serif;
+}
+
+/* 3. Sektioner och gemensamma element */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Samma snygga skugga här */
+}
+
+section h2 {
+    font-size: 20px;
+    color: #2d6cdf;
+    border-bottom: 2px solid #2d6cdf;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+article {
+    margin-bottom: 15px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+article h3 {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    color: #222222;
+}
+
+article p {
+    margin: 0 0 8px 0;
+    color: #666666;
+    font-size: 14px;
+}
+
+/* 4. Listor (Språk och Kompetenser) */
+ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+    color: #444444;
+    font-size: 14px;
+}
+
+/* 5. Länkar */
+a {
+    color: #2d6cdf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #111111;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.6; /* Blir lite transparent när man hovrar */
+    text-decoration: underline;
+}
+
+/* 6. Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 15px;
+    color: #777777; 
+}
+
+
+/* 7. MEDIA QUERIES (Större skärmar / Dator)*/
+@media (min-width: 768px) {
+    /* Gör att headern byter till sida-vid-sida på datorn */
+    header {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    header img {
+        margin-bottom: 0; /* Tar bort marginalen under bilden eftersom den nu ligger till vänster */
+        flex-shrink: 0; /* Ser till att bilden inte krymper ihop */
+    }
+}
