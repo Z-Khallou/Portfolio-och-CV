@@ -1,5 +1,7 @@
 /* 1. Globala inställningar och nollställning */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -20,7 +22,8 @@ header {
     background-color: #ffffff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Snygg mjuk skugga */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Snygg mjuk skugga */
     text-align: center;
     margin-bottom: 25px;
 }
@@ -48,7 +51,7 @@ header h1 {
     color: #555555;
     margin: 0;
     font:
-  1.2rem "Fira Sans",sans-serif;
+        1.2rem "Fira Sans", sans-serif;
 }
 
 /* 3. Sektioner och gemensamma element */
@@ -62,7 +65,8 @@ section {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Samma snygga skugga här */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    /* Samma snygga skugga här */
 }
 
 section h2 {
@@ -119,7 +123,8 @@ a:hover {
 }
 
 a:hover {
-    opacity: 0.6; /* Blir lite transparent när man hovrar */
+    opacity: 0.6;
+    /* Blir lite transparent när man hovrar */
     text-decoration: underline;
 }
 
@@ -128,12 +133,13 @@ footer {
     text-align: center;
     margin-top: 40px;
     font-size: 15px;
-    color: #777777; 
+    color: #777777;
 }
 
 
 /* 7. MEDIA QUERIES (Större skärmar / Dator)*/
 @media (min-width: 768px) {
+
     /* Gör att headern byter till sida-vid-sida på datorn */
     header {
         display: flex;
@@ -144,7 +150,9 @@ footer {
     }
 
     header img {
-        margin-bottom: 0; /* Tar bort marginalen under bilden eftersom den nu ligger till vänster */
-        flex-shrink: 0; /* Ser till att bilden inte krymper ihop */
+        margin-bottom: 0;
+        /* Tar bort marginalen under bilden eftersom den nu ligger till vänster */
+        flex-shrink: 0;
+        /* Ser till att bilden inte krymper ihop */
     }
 }
