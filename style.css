@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333333;
     background-color: #f8f9fa;
@@ -27,7 +27,7 @@ header {
     text-align: center;
     margin-bottom: 25px;
     border: 0.1rem, solid black;
-    
+
 }
 
 header img {
