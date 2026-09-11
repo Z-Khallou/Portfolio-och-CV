@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     line-height: 1.6;
     color: #333333;
     background-color: #f8f9fa;
@@ -26,6 +26,8 @@ header {
     /* Snygg mjuk skugga */
     text-align: center;
     margin-bottom: 25px;
+    border: 0.1rem, solid black;
+    
 }
 
 header img {
@@ -58,14 +60,14 @@ header h1 {
 main {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1rem;
 }
 
 section {
-    background-color: #ffffff;
+    background-color: #54b39117;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -2px 5px #222222;
     /* Samma snygga skugga här */
 }
 
@@ -93,7 +95,7 @@ article h3 {
 
 article p {
     margin: 0 0 8px 0;
-    color: #666666;
+    color: black;
     font-size: 14px;
 }
 
@@ -132,8 +134,8 @@ a:hover {
 footer {
     text-align: center;
     margin-top: 40px;
-    font-size: 15px;
-    color: #777777;
+    font-size: 16px;
+    color: black;
 }
 
 
