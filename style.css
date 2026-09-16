@@ -8,7 +8,7 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
-    color: black;
+    color: #000000;
     background-color: #f8f9fa;
     margin: 0;
     padding: 20px;
@@ -25,7 +25,7 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     text-align: center;
     margin-bottom: 25px;
-    border: 0.1rem solid black;
+    border: 0.1rem solid #000000;
 }
 
 header img {
@@ -34,7 +34,6 @@ header img {
     border-radius: 50% 10% / 10% 50%;
     object-fit: cover;
     border: 3px solid #555555;
-    /* Rättade färgkoden här (6 siffror) */
     margin-bottom: 15px;
 }
 
@@ -91,7 +90,7 @@ article h3 {
 
 article p {
     margin: 0 0 8px 0;
-    color: black;
+    color: #000000;
     font-size: 0.875rem;
 }
 
@@ -125,10 +124,10 @@ footer {
     text-align: center;
     margin-top: 10px;
     font-size: 1rem;
-    color: black;
+    color: #000000;
 }
 
-/* 7. MEDIA QUERIES (Större skärmar / Dator)*/
+/* 7. MEDIA QUERIES (Större skärmar / Dator) */
 @media (min-width: 768px) {
     header {
         display: flex;
@@ -144,14 +143,12 @@ footer {
     }
 
     main {
-        /* FIX: Byter från Grid till Columns för att slippa de tomma hålen */
         display: block;
         column-count: 2;
         column-gap: 1.5rem;
     }
 
     section {
-        /* Förhindrar att en box råkar klyvas mitt itu när den byter kolumn */
         break-inside: avoid;
         margin-bottom: 1.5rem;
     }
