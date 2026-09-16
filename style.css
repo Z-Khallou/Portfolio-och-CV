@@ -8,11 +8,11 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.6;
-    color: #333333;
+    color: black;
     background-color: #f8f9fa;
     margin: 0;
     padding: 20px;
-    max-width: 700px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,19 +23,18 @@ header {
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    /* Snygg mjuk skugga */
     text-align: center;
     margin-bottom: 25px;
-    border: 0.1rem, solid black;
-
+    border: 0.1rem solid black;
 }
 
 header img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50% 20% / 10% 40%;
+    width: 160px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50% 10% / 10% 50%;
     object-fit: cover;
     border: 3px solid #555555;
+    /* Rättade färgkoden här (6 siffror) */
     margin-bottom: 15px;
 }
 
@@ -47,20 +46,18 @@ header h1 {
     color: #1a1a1a;
 }
 
-
-.om-mig-text {
-    font-size: 14px;
+header p {
+    font-size: 1rem;
     color: #555555;
     margin: 0;
-    font:
-        1.2rem "Fira Sans", sans-serif;
+    font-family: "Fira Sans", sans-serif;
 }
 
 /* 3. Sektioner och gemensamma element */
 main {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 section {
@@ -68,11 +65,10 @@ section {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 -2px 5px #222222;
-    /* Samma snygga skugga här */
 }
 
 section h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #2d6cdf;
     border-bottom: 2px solid #2d6cdf;
     padding-bottom: 5px;
@@ -88,7 +84,7 @@ article:last-child {
 }
 
 article h3 {
-    font-size: 16px;
+    font-size: 1rem;
     margin: 0 0 5px 0;
     color: #222222;
 }
@@ -96,7 +92,7 @@ article h3 {
 article p {
     margin: 0 0 8px 0;
     color: black;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 /* 4. Listor (Språk och Kompetenser) */
@@ -108,7 +104,7 @@ ul {
 li {
     margin-bottom: 5px;
     color: #444444;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 /* 5. Länkar */
@@ -118,31 +114,22 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
     color: #111111;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-a:hover {
-    opacity: 0.6;
-    /* Blir lite transparent när man hovrar */
     text-decoration: underline;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
 }
 
 /* 6. Footer */
 footer {
     text-align: center;
-    margin-top: 40px;
-    font-size: 16px;
+    margin-top: 10px;
+    font-size: 1rem;
     color: black;
 }
 
-
 /* 7. MEDIA QUERIES (Större skärmar / Dator)*/
 @media (min-width: 768px) {
-
-    /* Gör att headern byter till sida-vid-sida på datorn */
     header {
         display: flex;
         align-items: center;
@@ -153,8 +140,19 @@ footer {
 
     header img {
         margin-bottom: 0;
-        /* Tar bort marginalen under bilden eftersom den nu ligger till vänster */
         flex-shrink: 0;
-        /* Ser till att bilden inte krymper ihop */
+    }
+
+    main {
+        /* FIX: Byter från Grid till Columns för att slippa de tomma hålen */
+        display: block;
+        column-count: 2;
+        column-gap: 1.5rem;
+    }
+
+    section {
+        /* Förhindrar att en box råkar klyvas mitt itu när den byter kolumn */
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
     }
 }
